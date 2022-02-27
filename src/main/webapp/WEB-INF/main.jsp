@@ -17,7 +17,7 @@
 		<div class="title">
 			<h1>TO-DO LIST</h1>
 		
-			<form name="myForm" action="main_process" method="get">
+			<form name="myForm" action="main_process.do" method="get">
 				<input type="text" name="work" class="work" placeholder=" Add something to do">
 				<span class="xBox"> <input type="button" value="+" class="add" id="add" onclick="addListCheck()"> </span>
 			</form>
@@ -31,7 +31,7 @@
 		<div class="todo">
 				<input type="checkbox" id="checkBox<%=i%>" onclick="checkClick(<%=i%>)">
 				<input type="text" name="workCheck" id="workCheck<%=i%>" class="workCheck" value="<%=list.get(i).getWork()%>" onclick="textClick(<%=i%>)" readonly>
-				<input type="button" value="삭제" id="deletebtn" onclick="location.href='delete?num=<%=num%>';"> <br />
+				<input type="button" value="삭제" id="deletebtn" onclick="location.href='delete.do?num=<%=num%>';"> <br />
 		</div>
 		<%
 			}
